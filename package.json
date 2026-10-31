@@ -1,0 +1,26 @@
+{
+  "name": "devtools-release-links",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/release_service.ts",
+    "start": "tsx src/release_service.ts",
+    "demo": "tsx scripts/send_build_event.ts",
+    "test": "node --import tsx --test test/release_decision.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "fastify": "^5.6.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
